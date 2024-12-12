@@ -6,10 +6,10 @@
 using namespace std;
 
 int main() {
-	HWND cs = FindWindow(0, "Counter-Strike");
-	cout << cs;
-	Sleep(5000);
 	
+	HWND cs = FindWindow(0, "Counter-Strike");
+
+	Sleep(8000);
 	// PULSAR TECLA F2  
 	SendMessage(cs, WM_KEYDOWN, F2, F2);
 	Sleep(1);
