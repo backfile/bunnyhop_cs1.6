@@ -2,6 +2,7 @@
 #include <windows.h>
 
 #define F2 0x3C0000
+#define W 0x110000;
 
 using namespace std;
 
@@ -9,12 +10,13 @@ int main() {
 	
 	HWND cs = FindWindow(0, "Counter-Strike");
 
-	Sleep(8000);
+	Sleep(3000);
 	// PULSAR TECLA F2  
-	SendMessage(cs, WM_KEYDOWN, F2, F2);
-	Sleep(1);
-	SendMessage(cs, WM_KEYUP, F2, F2);
-	
+	while(1){
+		SendMessage(cs, WM_KEYDOWN, W, W);
+		Sleep(1);
+		cout << "HOLA";
+	}
 	return 0;
 }
 
